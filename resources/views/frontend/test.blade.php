@@ -7,7 +7,7 @@
                 </div>
 
                 <div class="panel-body">
-                    You are in Test
+                    You are in @{{title}}
                 </div>
             </div>
         </div>

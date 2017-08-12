@@ -19,9 +19,9 @@
                         .state('test', {
                             url: '/test',
                             templateUrl: '/templates/test',
-                            // controller: 'HomeCtrl',
+                            controller: 'TestCtrl',
                             data: {
-                                title: 'Home'
+                                title: 'Test'
                             }
                         });
 

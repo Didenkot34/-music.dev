@@ -1,5 +1,6 @@
 'use strict';
-var webpack = require('webpack');
+const  NODE_ENV = process.env.NODE_ENV || 'development';
+const  webpack = require('webpack');
 
 module.exports = {
     entry: __dirname + "/resources/assets/angular/app", // string | object | array
@@ -15,8 +16,10 @@ module.exports = {
 
         filename: "bundle.js", // string
         // the filename template for entry chunks
+        
+        library : "app"
     },
-    watch : true,
+    watch : NODE_ENV == 'development',
 
     watchOptions : {
         aggregateTimeout: 100
@@ -48,6 +51,22 @@ module.exports = {
         ]
     },
     plugins: [
+        // new webpack.optimize.UglifyJsPlugin({
+        //     compress: {
+        //         warnings: false,
+        //         drop_console: true,
+        //         unsafe: true,
+        //     }
+        // })
+
+        new webpack.DefinePlugin({
+            NODE_ENV : JSON.stringify(NODE_ENV)
+        })
+    ]
+};
+
+if (NODE_ENV == 'production') {
+    module.exports.plugins = [
         new webpack.optimize.UglifyJsPlugin({
             compress: {
                 warnings: false,
@@ -55,5 +74,6 @@ module.exports = {
                 unsafe: true,
             }
         })
-    ]
-};
+    ];
+    
+}
