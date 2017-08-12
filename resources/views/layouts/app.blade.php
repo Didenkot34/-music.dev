@@ -78,6 +78,6 @@
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/angular.min.js') }}"></script>
     <script src="{{ asset('js/angular-ui-router.min.js') }}"></script>
-    <script src="{{ asset('angular/app.js') }}"></script>
+    <script src="{{ asset('angular/bundle.js') }}"></script>
 </body>
 </html>
