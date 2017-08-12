@@ -15,4 +15,9 @@ module.exports = {
         filename: "bundle.js", // string
         // the filename template for entry chunks
     },
+    watch : true,
+
+    watchOptions : {
+        aggregateTimeout: 100
+    }
 };

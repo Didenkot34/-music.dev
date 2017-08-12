@@ -7,4 +7,5 @@
         ]);
     
     require('./module')(ngModule);
+    require('./controllers')(ngModule);
 })();

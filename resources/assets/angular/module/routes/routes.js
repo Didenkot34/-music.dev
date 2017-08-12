@@ -6,7 +6,7 @@
                 .state('home', {
                     url: '/',
                     templateUrl: '/templates/home',
-                    //controller: 'HomeCtrl',
+                    controller: 'HomeCtrl',
                     data: {
                         title: 'Home'
                     }

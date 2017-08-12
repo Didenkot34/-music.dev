@@ -76,6 +76,7 @@
         ]);
     
     __webpack_require__(1)(ngModule);
+    __webpack_require__(4)(ngModule);
 })();
 
 
@@ -103,7 +104,7 @@
                 .state('home', {
                     url: '/',
                     templateUrl: '/templates/home',
-                    //controller: 'HomeCtrl',
+                    controller: 'HomeCtrl',
                     data: {
                         title: 'Home'
                     }
@@ -137,6 +138,37 @@
             PATH_FOLDER_AUDIO: '/uploads/songs/audio/'
         });
     };
+})();
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+(function () {
+    'use strict';
+    module.exports = function (ngModule) {
+        __webpack_require__(5)(ngModule);
+    };
+})();
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports) {
+
+(function () {
+    'use strict';
+    module.exports = function (ngModel) {
+        
+        ngModel.controller('HomeCtrl', HomeCtrl);
+        
+        HomeCtrl.inject = ['$scope'];
+        
+        function HomeCtrl($scope) {
+            
+            $scope.title = 'Home';
+        }
+    };
+
 })();
 
 /***/ })
