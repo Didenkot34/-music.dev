@@ -1,7 +1,6 @@
 (function () {
     'use strict';
-
-    var ngModule = angular
+    const ngModule = angular
         .module('app', [
             'ui.router'
         ]);
